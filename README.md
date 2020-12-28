@@ -1,1 +1,1 @@
-# prekybos_uzduots
+# prekybos_uzduotis
