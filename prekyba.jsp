@@ -20,7 +20,7 @@
 // String id = request.getParameter("userId");
 	String driverName = "com.mysql.jdbc.Driver";
 	String connectionUrl = "jdbc:mysql://localhost:3306/";
-	String dbName = "gyv_karalyste";
+	String dbName = "parduotuve";
 	String userId = "root";
 	String password = "";
 /*
@@ -46,7 +46,7 @@ e.printStackTrace();
 <form method="post" action="">
 <table>
 <tr>
-	<th>Karalyste</th>
+	<th>Menuo</th>
 	<td>
 		<input type="text" name="pav" required>
 	</td>
@@ -66,10 +66,14 @@ e.printStackTrace();
 
 </tr>
 <tr>
-	<th>kodas</th>
-	<th>Pavadinimas</th>
-	<th>sk_karalysciu..</th>
-	<th>sugrupuota</th>
+	<th>menuo </th>
+	<th>preke</th>
+	<th>prekiu grupe </th>
+	<th>rinka </th>
+	<th>kiekis gauta</th>
+	<th>suma gauta </th>
+	<th>kiekis parduota </th>.
+	<th>suma parduota </th>
 </tr>
 
 <%
@@ -105,7 +109,7 @@ e.printStackTrace();
 			+ where_part
 			+ "GROUP BY `domenas`.`kodas`";
 			
-			out.println ( datax );
+		//	out.println ( datax );
 
 			statement_take = connection.createStatement();	
 			resultSet = statement_take.executeQuery(datax);
